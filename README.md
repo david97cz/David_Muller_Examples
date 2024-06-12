@@ -1,3 +1,3 @@
-# David_Muller_Examples
+# David Muller Examples
 
 Here is a demonstration of the codes I created
