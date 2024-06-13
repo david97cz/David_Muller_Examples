@@ -6,6 +6,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 ALTER PROCEDURE [dbo].[delete_part]
+
 	@id int
 AS
 
@@ -17,16 +18,16 @@ BEGIN TRY
 		DELETE FROM [dbo].[table_descendant]
 		WHERE id_main = @id;
 
-		DELETE FROM [dbo].[table_main]
+		DELETE FROM [dbo].[delete_part]
 		WHERE id = @id;
 
 
 		COMMIT TRANSACTION
-		RETURN 0
+		RETURN 3
 END TRY
 BEGIN CATCH
 	ROLLBACK TRANSACTION
-	RETURN 1
+	RETURN 7
 END CATCH
 
 END
