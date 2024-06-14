@@ -1,43 +1,109 @@
 David Müller
 
-## Code Structure
+# Class: MainMenu
+Overview
 
-The code is consisted of 4 classes. The main class is Main_menu where all initial parameters can be set – size of board, ship deployment or scoring system. Other classes – ShipDeployment, Game and Scoring System are somehow connected to the main class.
- 
-In Main_Menu class are first imported all packages, then are defined all variables
-In method Main_menu all buttons, labels and function of buttons are adjusted, and they are added to the main frame:
- 
-If the The authorButton button is used, window with information about the author (me) pop up:
- 
-Buttons highScoreButton and rulesButton has function based on similar principle.
-The exitButton will close the Main method:
- 
-Buttons highScoreButton and rulesButton has function based on similar principle.
-The main function in Main_menu is used only launch main menu GUI:
-  
-The shipDeploymentButton calls the ShipDeplyment class and open 2 windows, where players can deploy their ship via GUI:
- 
-In the Battleship deployment window, player must place all the ships and save the deployment. The ship can be placed horizontally (left side of the ship will be placed in the button) or vertically (top side of the ship will be placed in the button). There is also reset button, that clears the field from ship and player can deploys ship again.
-In the ShipDeployment class are first defined all the variables similarly as in in Main_Menu class.  ShipDeplyment class contains methods:
-•	deployShipCanvas, that generates grid of buttons
-•	addCoordinates, that saves coordinates of deployed ships
-•	ship, that is used for generating any ship and consists of variables
-o	numberOfMoves, that is used to decide in which order will the ship be deployed
-o	coordA and coordB, that set first coordinates (x and y) in the grid
-o	lengthOfShip, that set length of the ship
-o	type, that assigns type of ship
-•	deployShip, that generate specific ship in specic order of deployment
- 
+The MainMenu class handles the initial setup and user interface of the main menu, including the configuration of buttons, labels, and their respective functions.
 
-If all the ships are deployed, the game can be launched
- 
-Class for game itself is Game. In Game class are first defined all variables. Class Game consists of methods playerXBattlefield, playerXMove, scoreXAdd  for each player (X = 1 or 2), player ,setTurn and getHighScore. In method player is set the GUI of the game. The method player is launched by the play method. Methods player1Battlefield and player2Battlefield set grid into GUI. Methods Player1Move and Player2Move compare saved coordinates from class ShipDeployment with coordinates obtained by clicking on arbitrary button in grid. If they are same the button changes its colour to red and add score to opposite player.
- 
-Methods scoreAdd and move are used for adding score and number of turn.
-Method play is used to launch the Game window and it is used in Main_Menu in button startGameButton.
- 
-Method setTurn allows switching game between Player 1 and Player 2 after a turn is played.
-Method getHighScore returns hight score.
-Game will ends when player reveals all opposing ships 
-Last class ScoringSystem is for choosing scoring system.
-In first case is scoring system equals for both players. In second case the points-per-hit are different for each player in order to compensate the player going second.
+## Initialization
+Import Packages: All necessary packages are imported.
+
+Define Variables: Essential variables are initialized.
+
+Methods
+
+MainMenu: Configures and adds all buttons, labels, and their functions to the main frame.
+
+Button Functions
+
+Author Button: Displays a window with information about the author.
+
+HighScore Button: Displays the high score information.
+
+Rules Button: Displays the game rules.
+
+Exit Button: Closes the main menu.
+
+ShipDeployment Button: Calls the ShipDeployment class, opening two windows for players to deploy their ships via the GUI.
+
+Main Function: Launches the main menu GUI.
+
+# Class: ShipDeployment
+
+Overview
+
+The ShipDeployment class manages the ship deployment phase of the game, allowing players to place ships on the grid.
+
+
+Initialization
+
+Define Variables: Variables are initialized similarly to the MainMenu class.
+
+Methods
+
+deployShipCanvas: Generates a grid of buttons for ship placement.
+
+addCoordinates: Saves the coordinates of deployed ships.
+
+ship: Generates any ship with the following attributes:
+
+numberOfMoves: Determines the deployment order.
+
+coordA and coordB: Set the initial coordinates (x, y) in the grid.
+
+lengthOfShip: Sets the length of the ship.
+
+type: Assigns the type of ship.
+
+deployShip: Generates a specific ship in the defined order of deployment.
+
+Deployment Phase
+
+Players must place all ships and save the deployment. Ships can be placed:
+
+Horizontally: The left side of the ship is placed on the button.
+
+Vertically: The top side of the ship is placed on the button.
+
+Reset Button: Clears the field for re-deployment.
+
+# Class: Game
+Overview
+
+The Game class manages the actual gameplay, including player moves and score tracking.
+
+## Initialization
+
+Define Variables: Variables are initialized at the beginning.
+
+Methods
+
+playerXBattlefield (X = 1 or 2): Sets up the grid for each player in the GUI.
+
+playerXMove (X = 1 or 2): Compares saved coordinates from ShipDeployment with coordinates obtained by clicking on a grid button. If they match, the button changes color to red, and the opposite player scores.
+
+scoreXAdd (X = 1 or 2): Adds score for each player.
+
+move: Tracks the number of turns.
+
+play: Launches the game window and is called by the startGameButton in MainMenu.
+
+setTurn: Switches turns between Player 1 and Player 2.
+
+getHighScore: Returns the high score.
+
+## Game End
+
+The game ends when a player reveals all opposing ships.
+
+# Class: ScoringSystem
+
+Overview
+
+The ScoringSystem class allows selection of different scoring systems.
+
+## Scoring Systems
+
+Equal Scoring: Both players have the same points-per-hit.
+
+Compensated Scoring: Points-per-hit differ for each player to compensate for the second player's disadvantage.
