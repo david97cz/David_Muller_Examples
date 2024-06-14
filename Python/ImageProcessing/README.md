@@ -16,41 +16,50 @@ shapes, specifically circles and squares, within images.
 Methods
 
 Initialization:
-● The __init__ method initializes the ShapeDetector object with parameters required
+- The __init__ method initializes the ShapeDetector object with parameters required
 for shape detection.
+
 Parameters:
-● hough_params: Parameters for Hough circle detection algorithm.
-● threshold_value: Threshold value for binary thresholding.
-● max_value: Maximum value for binary thresholding.
-● threshold_type: Type of thresholding method.
+- hough_params: Parameters for Hough circle detection algorithm.
+- threshold_value: Threshold value for binary thresholding.
+- max_value: Maximum value for binary thresholding.
+- threshold_type: Type of thresholding method.
+
 Detection:
-● The detect_shapes method takes an image as input and returns a list of detected
+
+The detect_shapes method takes an image as input and returns a list of detected
 shapes. Each shape is represented by a tuple containing its coordinates, dimensions
 and type.
+
 2. Tracker
+
 Class: Tracker
+
 The tracker, implemented through the Tracker class, is responsible for detecting shapes in a
 video file and tracking their positions over time.
-1
+
+
 Attributes:
-● video_path: Path to the input video file.
-● shape_detector: An instance of the ShapeDetector class used for detecting shapes in
-each frame of the video.
+- video_path: Path to the input video file.
+- shape_detector: An instance of the ShapeDetector class used for detecting shapes in each frame of the video.
+  
 Methods:
 Initialization:
-● The __init__ method initializes the Tracker object with the video file path and
+- The __init__ method initializes the Tracker object with the video file path and
 detection parameters.
 Parameters:
-● video_path: Path to the input video file.
-● hough_params: Parameters for Hough circle detection algorithm.
-● threshold_value: Threshold value for binary thresholding.
-● max_value: Maximum value for binary thresholding.
-● threshold_type: Type of thresholding method.
+- video_path: Path to the input video file.
+- hough_params: Parameters for Hough circle detection algorithm.
+- threshold_value: Threshold value for binary thresholding.
+- max_value: Maximum value for binary thresholding.
+- threshold_type: Type of thresholding method.
 Shape detection and tracking in the video:
-● The detect_shapes_in_video method detects shapes in the input video and visualizes
+- The detect_shapes_in_video method detects shapes in the input video and visualizes
 their positions over time. It processes each frame, detects shapes, and visualizes
 them with bounding boxes and a path.
-3. Running the App
+
+4. Running the App
+
 1. Install the necessary libraries by running pip install opencv-python.
 2. Download the provided script (object_detection_and_tracking.py) and the video file
 (luxonis_task_video.mp4) to the same directory.
