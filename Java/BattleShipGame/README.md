@@ -35,7 +35,7 @@ Overview
 The ShipDeployment class manages the ship deployment phase of the game, allowing players to place ships on the grid.
 
 
-Initialization
+## Initialization
 
 Define Variables: Variables are initialized similarly to the MainMenu class.
 
