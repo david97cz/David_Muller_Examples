@@ -58,7 +58,7 @@ Shape detection and tracking in the video:
 their positions over time. It processes each frame, detects shapes, and visualizes
 them with bounding boxes and a path.
 
-4. Running the App
+## Running the App
 
 1. Install the necessary libraries by running pip install opencv-python.
 2. Download the provided script (object_detection_and_tracking.py) and the video file
