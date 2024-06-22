@@ -1,1 +1,1 @@
-Just a test of writing code in C
+Just a basic example of a code in C
