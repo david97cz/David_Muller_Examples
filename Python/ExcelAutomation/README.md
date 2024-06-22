@@ -1,5 +1,5 @@
 ## Seznam funkcionalit:
-1) Vykreslení grafu z dat v xlsx. souboru + zobrazení jeho maxim
+1) Výběr sloupců s požadovanými daty + vykreslení grafu z dat v xlsx. souboru + zobrazení jeho maxim
    
 2) Převedení souboru z .xlsx do.txt
    
