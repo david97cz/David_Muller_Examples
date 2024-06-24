@@ -12,7 +12,7 @@
 1) Battle ships Game
 
 ## Matlab
-1) Principal Component Analasys
+1) Principal Component Analasis
 
 ## Shell
 1) Terminal selector for some mathematical functions
