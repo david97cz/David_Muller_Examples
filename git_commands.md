@@ -1,7 +1,8 @@
 ## Navigate to the repository directory
 
+```sh
 cd path/to/your/repository
-
+```
 ## Check the status of the repository
 
 git status
