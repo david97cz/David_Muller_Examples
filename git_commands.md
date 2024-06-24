@@ -33,8 +33,9 @@ git push origin main
 git remote -v
 ```
 
-```sh
-## Add/set URL
-```
 
+## Add/set URL
+
+```sh
 git remote add origin https://github.com/username/repository.git
+```
