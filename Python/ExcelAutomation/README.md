@@ -1,4 +1,4 @@
-## List ff functions:
+## List of functions:
 1) Selecting columns with required data + plotting the chart from data in xlsx. file + displaying maxima
    
 2) Automated converting file from .xlsx to .txt
