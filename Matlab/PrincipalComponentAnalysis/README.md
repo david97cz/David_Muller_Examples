@@ -1,5 +1,7 @@
 ## Example of Principal Component Analysis in Matlab
 
+![PCA](Data.jpg "PCA")
+
 1) Centering the data set
 
 ```m
